@@ -10,7 +10,7 @@ const Navigation = () => {
     if (id) {
       switch (id) {
         case "navAbout":
-          break;
+          break
       }
     }
 
