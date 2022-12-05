@@ -1,0 +1,17 @@
+.main {
+  display: none;
+}
+
+.main.active {
+  display: block;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 2em;
+  color: deeppink;
+}
+
+.main {
+  display: none;
+}

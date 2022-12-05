@@ -1,0 +1,135 @@
+.navcontainer {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  width: 60px;
+  height: 40px;
+  background-color: rgba(204, 204, 204, 0.1);
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  border-radius: 35px;
+  transition: height 0.3s;
+  cursor: pointer;
+}
+
+.navcontainer.active {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  width: 60px;
+  height: 270px;
+  background-color: rgba(204, 204, 204, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+  border-radius: 35px;
+  transition: height 0.3s;
+  cursor: pointer;
+}
+
+.menuBody {
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 37px;
+  padding: 100px 30px 30px 30px;
+  transition: all 0.3s;
+  list-style: none;
+  transform: scale(0);
+}
+
+.menuBody li {
+  cursor: pointer;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.menuBody li:hover {
+  color: #1c1817;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menuBody li i {
+  position: relative;
+  margin-right: 50px;
+  height: 100%;
+  width: 50%;
+}
+
+.menuBody li span {
+  height: 100%;
+  width: 50%;
+}
+
+.menuBody.active {
+  margin-top: 20px;
+  display: block;
+  transition: all 0.3s;
+  transform: scale(1);
+}
+
+.menuIcon {
+  top: 0;
+  position: relative;
+  width: 30px;
+  height: 18px;
+  display: block;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.menuIcon::before,
+.menuIcon::after,
+.menuIcon span {
+  left: 0;
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  transition: all 0.3s ease 0s;
+  background-color: #fff;
+  display: block;
+}
+
+.menuIcon::before,
+.menuIcon::after {
+  content: "";
+}
+
+.menuIcon::before {
+  top: 0;
+}
+
+.menuIcon::after {
+  bottom: 0;
+}
+
+.menuIcon span {
+  top: 50%;
+  transform: scale(1) translate(0, -50%);
+}
+
+.menuIcon.active {
+  transition: 0.3s;
+}
+
+.menuIcon.active span {
+  transform: scale(0) translate(0, -50%);
+}
+
+.menuIcon.active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.menuIcon.active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
