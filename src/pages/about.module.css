@@ -1,5 +1,5 @@
 .main {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   position: relative;
   z-index: 1;
@@ -154,6 +154,6 @@
 }
 
 .skill img {
-  width: 96px;
-  height: 96px;
+  width: 60px;
+  height: 60px;
 }
