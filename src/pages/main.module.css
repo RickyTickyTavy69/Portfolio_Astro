@@ -1,0 +1,5 @@
+.switchPages {
+  display: flex;
+  width: 200%;
+  overflow: hidden;
+}

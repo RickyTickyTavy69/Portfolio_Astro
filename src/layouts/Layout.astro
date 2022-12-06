@@ -6,6 +6,9 @@ const { title = "Astro App" } = Astro.props as Props;
 
 //components
 import Navigation from "../components/navigation";
+
+//styles
+import styles from "./layout.module.css";
 ---
 
 <html lang="en">
@@ -20,8 +23,7 @@ import Navigation from "../components/navigation";
       rel="stylesheet"
     />
   </head>
-  <body style={{ backgroundColor: "#412A3A" }}>
-    <Navigation client:load />
+  <body class={styles.body}>
     <slot />
     <!--special Tag for rendering content in Layout -->
   </body>

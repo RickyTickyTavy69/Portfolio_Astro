@@ -2,13 +2,21 @@ import { useState } from "react";
 import About from "./About";
 import Home from "./Home";
 
+//styles
+import styles from "./main.module.css";
+
+import Navigation from "../components/navigation";
+
 const Main = () => {
-  const [page, setPage] = useState("Home");
+  const [page, setPage] = useState("About");
 
   return (
     <div>
-      <About page={page} />
-      <Home page={page} />
+      <Navigation page={page} setPage={setPage} />
+      <div className={styles.switchPages}>
+        <Home page={page} />
+        <About page={page} />
+      </div>
     </div>
   );
 };

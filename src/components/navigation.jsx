@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./navigation.module.css";
 
-const Navigation = () => {
+const Navigation = ({ page, setPage }) => {
   const [open, setOpen] = useState(false);
 
   const handleMenuClick = (event) => {
@@ -10,6 +10,10 @@ const Navigation = () => {
     if (id) {
       switch (id) {
         case "navAbout":
+          setPage("About");
+          break;
+        case "navHome":
+          setPage("Home");
           break;
       }
     }
@@ -21,7 +25,10 @@ const Navigation = () => {
     <div
       onClick={handleMenuClick}
       className={
-        open ? `${styles.navcontainer} ${styles.active}` : styles.navcontainer
+        open
+          ? `${styles.navcontainer} ${styles.active} ` +
+            (page === "About" ? ` ${styles.black}` : "")
+          : styles.navcontainer + (page === "About" ? ` ${styles.black}` : "")
       }
     >
       <div
@@ -33,7 +40,10 @@ const Navigation = () => {
       </div>
       <ul
         className={
-          open ? `${styles.menuBody} ${styles.active}` : styles.menuBody
+          open
+            ? `${styles.menuBody} ${styles.active}` +
+              (page === "About" ? ` ${styles.black}` : "")
+            : styles.menuBody + (page === "About" ? ` ${styles.black}` : "")
         }
       >
         <li id="navHome">

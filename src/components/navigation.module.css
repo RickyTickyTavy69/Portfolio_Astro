@@ -11,6 +11,22 @@
   border-radius: 35px;
   transition: height 0.3s;
   cursor: pointer;
+  z-index: 2;
+}
+
+.navcontainer.black {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  width: 60px;
+  height: 40px;
+  background-color: rgba(204, 204, 204, 0.5);
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  border-radius: 35px;
+  transition: height 0.3s;
+  cursor: pointer;
 }
 
 .navcontainer.active {
@@ -29,8 +45,22 @@
   cursor: pointer;
 }
 
+.navcontainer.active.black {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  width: 60px;
+  height: 270px;
+  background-color: rgba(204, 204, 204, 0.5);
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  border-radius: 35px;
+  transition: height 0.3s;
+  cursor: pointer;
+}
+
 .menuBody {
-  color: #fff;
   position: fixed;
   top: 0;
   left: 37px;
@@ -38,6 +68,10 @@
   transition: all 0.3s;
   list-style: none;
   transform: scale(0);
+}
+
+.navcontainer.black .menuBody li {
+  color: rgb(82, 79, 79);
 }
 
 .menuBody li {
@@ -48,10 +82,17 @@
   display: flex;
   align-items: center;
   font-weight: bold;
+  color: white;
 }
 
 .menuBody li:hover {
   color: #1c1817;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menuBody.black li:hover {
+  color: deeppink;
   font-weight: bold;
   transition: 0.3s;
 }
@@ -84,6 +125,12 @@
   cursor: pointer;
   z-index: 10;
   transition: 0.3s;
+}
+
+.navcontainer.black .menuIcon::before,
+.navcontainer.black .menuIcon::after,
+.navcontainer.black .menuIcon span {
+  background-color: #1c1817;
 }
 
 .menuIcon::before,

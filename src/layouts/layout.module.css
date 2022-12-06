@@ -1,0 +1,14 @@
+.body {
+  margin: 0;
+  padding: 0;
+  background-color: #412a3a;
+  overflow: hidden;
+}
+
+html {
+  max-height: 100vh;
+}
+
+body {
+  max-height: 100vh;
+}

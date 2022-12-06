@@ -1,17 +1,159 @@
 .main {
-  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 1;
+  left: 0;
+  transition: left 0.3s;
+  display: block;
+  background-color: #ffeaff;
 }
 
 .main.active {
+  position: relative;
+  transition: left 0.3s;
+  left: 0;
+  height: 100vh;
   display: block;
+}
+
+.mainContent {
+  padding-top: 0px;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .title {
   text-transform: uppercase;
-  font-size: 2em;
+  font-size: 3em;
+  color: deeppink;
+  font-weight: 800;
+}
+
+.titleGrey {
+  color: rgb(64, 63, 63);
+}
+
+.subtitle {
+  text-transform: uppercase;
+  position: relative;
+  font-size: 1em;
+}
+
+.subtitle::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: deeppink;
+  left: 220px;
+  top: calc(50% - 2px);
+  position: absolute;
+}
+
+.subtitle::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: rgba(255, 20, 147);
+  right: 220px;
+  top: calc(50% - 2px);
+  position: absolute;
+}
+
+.infoSection {
+  display: flex;
+  justify-content: space-around;
+  padding: 8vh 50px 10vh 50px;
+  gap: 50px;
+}
+
+.infoSection img {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: -20px;
+  top: -20px;
+}
+
+.pictureContainer {
+  border: 5px solid rgba(255, 20, 147, 0.6);
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.infoContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 55%;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.line {
+  margin-bottom: 35px;
+  text-align: left;
+  color: rgb(137, 137, 137);
+  font-weight: 600;
+}
+
+.line span {
+  color: rgb(0, 0, 0);
+  margin-left: 35px;
+}
+
+.line a {
+  color: rgb(0, 0, 0);
+  margin-left: 35px;
+  text-decoration: none;
+}
+
+.line a:hover {
   color: deeppink;
 }
 
-.main {
-  display: none;
+.form {
+  display: flex;
+}
+
+.button {
+  width: 200px;
+  background-color: transparent;
+  border: 3px solid deeppink;
+  padding: 12px 8px;
+  border-radius: 15px;
+  font-size: 1em;
+  font-weight: 600;
+  color: deeppink;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.button:hover {
+  border: 3px solid rgb(64, 63, 63);
+  background-color: rgb(64, 63, 63);
+  color: white;
+  transition: 0.3s;
+}
+
+.skillsSection {
+  display: flex;
+  justify-content: space-around;
+}
+
+.skill img {
+  width: 96px;
+  height: 96px;
 }

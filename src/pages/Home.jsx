@@ -8,7 +8,7 @@ const Home = ({ page }) => {
   return (
     <main
       className={
-        page === "Home" ? `${styles.main} ${styles.active}` : styles.main
+        page === "About" ? `${styles.main} ${styles.hide}` : styles.main
       }
     >
       <section className={styles.home}>
