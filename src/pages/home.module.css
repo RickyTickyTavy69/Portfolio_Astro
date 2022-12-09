@@ -10,9 +10,29 @@
 
 .main.hide {
   left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.5s;
+  display: block;
+  margin-left: -25%;
+}
+
+.main.showPortfolio {
+  left: 0;
+  height: 100vh;
+  width: 100vw;
   transition: all 0.5s;
   display: block;
   margin-left: -50%;
+}
+
+.showContact {
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.5s;
+  display: block;
+  margin-left: -75%;
 }
 
 .home {

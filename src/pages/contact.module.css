@@ -1,0 +1,127 @@
+.main {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 1;
+  left: 0;
+  transition: left 0.3s;
+  display: block;
+}
+
+.mainContent {
+  padding-top: 0px;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 3em;
+  color: rgb(34, 33, 34);
+  font-weight: 800;
+}
+
+.titleGrey {
+  color: #fff;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  position: relative;
+  font-size: 1em;
+}
+
+.subtitle::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  left: 120px;
+  top: calc(50% - 2px);
+  position: absolute;
+}
+
+.subtitle::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  right: 120px;
+  top: calc(50% - 2px);
+  position: absolute;
+}
+
+.form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.inputField input,
+textarea {
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 15px;
+}
+
+.inputField input {
+  padding: 10px 20px;
+  font-size: 1.5em;
+}
+
+.inputField textarea {
+  resize: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  width: 500px;
+  height: 200px;
+}
+
+.inputField input,
+textarea:focus {
+  outline: none;
+}
+
+.formHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 5vh;
+}
+
+.formFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.button {
+  padding: 10px 20px;
+  width: 200px;
+  height: 50px;
+  margin-top: 3vh;
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: rgb(34, 33, 34);
+  transition: 0.3s;
+  color: #fff;
+}
+
+/*error messages*/
+
+.errorMessage {
+  color: red;
+  margin-top: 1vh;
+}

@@ -1,16 +1,37 @@
 //pictures
+import { useEffect, useState } from "react";
 import myfoto from "../assets/foto/myfotoquadrat.png";
 
 //styles
 import styles from "./home.module.css";
 
 const Home = ({ page }) => {
+  const [mainStyles, setMainStyles] = useState(
+    `${styles.main} ${styles.showContact}`
+  );
+
+  const moveScreens = () => {
+    switch (page) {
+      case "Home":
+        setMainStyles(styles.main);
+        break;
+      case "About":
+        setMainStyles(`${styles.main} ${styles.hide}`);
+        break;
+      case "Portfolio":
+        setMainStyles(`${styles.main} ${styles.showPortfolio}`);
+        break;
+      case "Contact":
+        setMainStyles(`${styles.main} ${styles.showContact}`);
+    }
+  };
+
+  useEffect(() => {
+    moveScreens();
+  }, [page]);
+
   return (
-    <main
-      className={
-        page === "About" ? `${styles.main} ${styles.hide}` : styles.main
-      }
-    >
+    <main className={mainStyles}>
       <section className={styles.home}>
         <div className={styles.picture}>
           <img className={styles.foto} src={myfoto} alt="my foto" />

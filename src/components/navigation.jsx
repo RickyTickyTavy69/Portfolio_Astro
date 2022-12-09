@@ -15,6 +15,12 @@ const Navigation = ({ page, setPage }) => {
         case "navHome":
           setPage("Home");
           break;
+        case "navPortfolio":
+          setPage("Portfolio");
+          break;
+        case "navContact":
+          setPage("Contact");
+          break;
       }
     }
 
@@ -27,8 +33,9 @@ const Navigation = ({ page, setPage }) => {
       className={
         open
           ? `${styles.navcontainer} ${styles.active} ` +
-            (page === "About" ? ` ${styles.black}` : "")
-          : styles.navcontainer + (page === "About" ? ` ${styles.black}` : "")
+            (page === "About" || page === "Portfolio" ? ` ${styles.black}` : "")
+          : styles.navcontainer +
+            (page === "About" || page === "Portfolio" ? ` ${styles.black}` : "")
       }
     >
       <div
@@ -42,8 +49,13 @@ const Navigation = ({ page, setPage }) => {
         className={
           open
             ? `${styles.menuBody} ${styles.active}` +
-              (page === "About" ? ` ${styles.black}` : "")
-            : styles.menuBody + (page === "About" ? ` ${styles.black}` : "")
+              (page === "About" || page === "Portfolio"
+                ? ` ${styles.black}`
+                : "")
+            : styles.menuBody +
+              (page === "About" || page === "Portfolio"
+                ? ` ${styles.black}`
+                : "")
         }
       >
         <li id="navHome">

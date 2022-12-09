@@ -1,6 +1,10 @@
 import { useState } from "react";
+
+//components
 import About from "./About";
 import Home from "./Home";
+import Portfolio from "./Portfolio";
+import Contact from "./Contact";
 
 //styles
 import styles from "./main.module.css";
@@ -8,7 +12,7 @@ import styles from "./main.module.css";
 import Navigation from "../components/navigation";
 
 const Main = () => {
-  const [page, setPage] = useState("Home");
+  const [page, setPage] = useState("Contact");
 
   return (
     <div>
@@ -16,6 +20,8 @@ const Main = () => {
       <div className={styles.switchPages}>
         <Home page={page} />
         <About page={page} />
+        <Portfolio page={page} />
+        <Contact page={page} />
       </div>
     </div>
   );
