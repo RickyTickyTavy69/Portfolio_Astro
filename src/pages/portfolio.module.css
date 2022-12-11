@@ -56,3 +56,52 @@
   top: calc(50% - 2px);
   position: absolute;
 }
+
+/*=================================*/
+
+.portfolioContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.projekt div {
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  background-color: white;
+  width: 300px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.projekt a {
+  text-decoration: none;
+  color: black;
+  font-size: 2em;
+  font-weight: bold;
+
+  display: block;
+  width: 300px;
+  border-radius: 25px;
+  margin-bottom: 5vh;
+}
+
+.projekt .mouseover {
+  display: flex;
+  border-radius: 25px;
+  background-color: #ffa0d3;
+  width: 300px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -200px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.projekt .mouseover.active {
+  opacity: 1;
+  transition: 0.3s;
+}
