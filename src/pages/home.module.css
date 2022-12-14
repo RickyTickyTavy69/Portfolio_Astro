@@ -37,10 +37,11 @@
 
 .home {
   display: flex;
-  max-width: 900px;
-  margin: 15vh auto;
+  max-width: 700px;
+  margin: 35vh auto;
   justify-content: space-between;
   align-items: center;
+  gap: 50px;
 }
 
 .foto {
@@ -51,7 +52,7 @@
 }
 
 .info {
-  width: 500px;
+  width: 400px;
 }
 
 .buttons {
@@ -75,4 +76,9 @@
 .portfolio {
   background-color: transparent;
   border: 3px solid #1c1817;
+}
+
+/*@media queries*/
+
+@media screen and (max-width: "1400px") {
 }

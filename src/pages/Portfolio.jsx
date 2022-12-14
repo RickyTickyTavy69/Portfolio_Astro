@@ -71,7 +71,7 @@ const Portfolio = ({ page }) => {
                 href="https://rickytickytavy69.github.io/TikTakToe_VanillaJS/"
                 target={"_blank"}
               >
-                <div id="projekt">TikTakToe</div>
+                <div id="projekt">Rock paper scissors</div>
                 <div id="projekt" className={styles.mouseover}>
                   Visit Project
                 </div>

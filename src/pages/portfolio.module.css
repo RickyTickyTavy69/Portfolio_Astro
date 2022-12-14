@@ -64,6 +64,10 @@
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
+.projekt {
+  border: 1px solid black;
+}
+
 .projekt div {
   display: flex;
   flex-direction: column;
@@ -80,7 +84,6 @@
   color: black;
   font-size: 2em;
   font-weight: bold;
-
   display: block;
   width: 300px;
   border-radius: 25px;
