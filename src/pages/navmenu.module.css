@@ -1,0 +1,67 @@
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  left: 0;
+  transition: all 0.5s;
+  overflow: hidden;
+  display: block;
+}
+
+.main.hide {
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.5s;
+  display: block;
+  margin-left: -25%;
+}
+
+.main.showPortfolio {
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.5s;
+  display: block;
+  margin-left: -50%;
+}
+
+.showContact {
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.5s;
+  display: block;
+  margin-left: -75%;
+}
+
+.navigationBlocks {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
+}
+
+.navBloc {
+  width: 30vw;
+  height: 400px;
+  border: 2px solid black;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.navBloc:hover {
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+}
+
+/*@media queries*/
+
+@media screen and (max-width: "1400px") {
+}

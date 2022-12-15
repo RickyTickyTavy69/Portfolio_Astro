@@ -65,7 +65,9 @@
 }
 
 .projekt {
-  border: 1px solid black;
+  width: 300px;
+  height: 200px;
+  margin: 5vh 0 5vh 0;
 }
 
 .projekt div {
@@ -107,4 +109,42 @@
 .projekt .mouseover.active {
   opacity: 1;
   transition: 0.3s;
+}
+
+/*@media*/
+
+@media (max-width: 1300px) {
+  .projekt {
+    width: 210px;
+    height: 140px;
+    margin: 3vh 0 3vh 0;
+  }
+
+  .projekt div {
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: white;
+    width: 210px;
+    height: 140px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projekt a {
+    text-decoration: none;
+    color: black;
+    font-size: 2em;
+    font-weight: bold;
+    display: block;
+    width: 140px;
+    border-radius: 25px;
+    margin-bottom: 3vh;
+  }
+
+  .projekt .mouseover {
+    width: 210px;
+    height: 140px;
+    top: -140px;
+  }
 }

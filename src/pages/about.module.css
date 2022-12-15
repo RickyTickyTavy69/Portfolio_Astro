@@ -171,3 +171,28 @@
     width: 90%;
   }
 }
+
+@media (max-height: 800px) {
+  .infoSection img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: -20px;
+    top: -20px;
+  }
+
+  .pictureContainer {
+    border: 5px solid rgba(255, 20, 147, 0.6);
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+
+  .line {
+    margin-bottom: 25px;
+  }
+
+  .infoSection {
+    padding: 5vh 50px 5vh 50px;
+  }
+}

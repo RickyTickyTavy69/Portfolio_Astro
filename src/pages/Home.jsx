@@ -6,9 +6,7 @@ import myfoto from "../assets/foto/myfotoquadrat.png";
 import styles from "./home.module.css";
 
 const Home = ({ page }) => {
-  const [mainStyles, setMainStyles] = useState(
-    `${styles.main} ${styles.showContact}`
-  );
+  const [mainStyles, setMainStyles] = useState(`${styles.main}`);
 
   const moveScreens = () => {
     switch (page) {
