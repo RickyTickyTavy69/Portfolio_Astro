@@ -41,6 +41,8 @@
   text-transform: uppercase;
   position: relative;
   font-size: 1em;
+  width: 800px;
+  margin: 0 auto;
 }
 
 .subtitle::after {
@@ -49,7 +51,7 @@
   width: 30px;
   height: 3px;
   background-color: deeppink;
-  left: 220px;
+  left: 0;
   top: calc(50% - 2px);
   position: absolute;
 }
@@ -60,7 +62,7 @@
   width: 30px;
   height: 3px;
   background-color: rgba(255, 20, 147);
-  right: 220px;
+  right: 0;
   top: calc(50% - 2px);
   position: absolute;
 }
@@ -156,4 +158,41 @@
 .skill img {
   width: 60px;
   height: 60px;
+}
+
+/*media queries*/
+
+@media (max-width: 1200px) {
+  .infoSection .line {
+    font-size: 0.9em;
+  }
+
+  .info {
+    width: 90%;
+  }
+}
+
+@media (max-height: 800px) {
+  .infoSection img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: -20px;
+    top: -20px;
+  }
+
+  .pictureContainer {
+    border: 5px solid rgba(255, 20, 147, 0.6);
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+
+  .line {
+    margin-bottom: 25px;
+  }
+
+  .infoSection {
+    padding: 5vh 50px 5vh 50px;
+  }
 }

@@ -58,11 +58,6 @@ const About = ({ page }) => {
                 </div>
                 <div className={styles.line}>
                   <p>
-                    Nationality <span>russian</span>
-                  </p>
-                </div>
-                <div className={styles.line}>
-                  <p>
                     Level <span>Junior</span>
                   </p>
                 </div>

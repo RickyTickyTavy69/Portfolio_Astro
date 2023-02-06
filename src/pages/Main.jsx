@@ -6,6 +6,9 @@ import Home from "./Home";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 
+//components small layout
+import NavMenu from "./NavMenu";
+
 //styles
 import styles from "./main.module.css";
 
@@ -16,12 +19,22 @@ const Main = () => {
 
   return (
     <div>
-      <Navigation page={page} setPage={setPage} />
+      <div className={styles.navigation}>
+        <Navigation page={page} setPage={setPage} />
+      </div>
+
       <div className={styles.switchPages}>
         <Home page={page} />
         <About page={page} />
         <Portfolio page={page} />
         <Contact page={page} />
+      </div>
+
+      <div className={styles.smallLayout}>
+        <NavMenu page={page} setPage={setPage} />
+        <About page={page} setPage={setPage} />
+        <Portfolio page={page} setPage={setPage} />
+        <Contact page={page} setPage={setPage} />
       </div>
     </div>
   );

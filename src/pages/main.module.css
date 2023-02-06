@@ -3,3 +3,23 @@
   width: 400%;
   overflow: hidden;
 }
+
+.smallLayout {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .switchPages {
+    display: none;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .smallLayout {
+    display: flex;
+    width: 400%;
+    overflow: hidden;
+  }
+}
