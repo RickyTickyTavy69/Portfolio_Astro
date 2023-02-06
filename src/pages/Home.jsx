@@ -5,7 +5,7 @@ import myfoto from "../assets/foto/myfotoquadrat.png";
 //styles
 import styles from "./home.module.css";
 
-const Home = ({ page }) => {
+const Home = ({ page, setPage }) => {
   const [mainStyles, setMainStyles] = useState(`${styles.main}`);
 
   const moveScreens = () => {
@@ -23,6 +23,22 @@ const Home = ({ page }) => {
         setMainStyles(`${styles.main} ${styles.showContact}`);
     }
   };
+
+  // handles the clicks on the two buttons on the home page.
+  const handleButtonClick = (event) => {
+    const target = event.target.id;
+    console.log(`target: ${target}`);
+    if(target){
+      switch(target){
+        case "about":
+          setPage("About");
+          break;
+        case "portfolio":
+          setPage("Portfolio");
+          break;
+      }
+    }
+  }
 
   useEffect(() => {
     moveScreens();
@@ -42,9 +58,9 @@ const Home = ({ page }) => {
             Germany. I like to develop and build Websites with different
             technologies.
           </p>
-          <div className={styles.buttons}>
-            <button className={styles.more}>More about me</button>
-            <button className={styles.portfolio}>Portfolio</button>
+          <div onClick={handleButtonClick} className={styles.buttons}>
+            <button id={"about"} className={styles.more}>More about me</button>
+            <button id={"portfolio"} className={styles.portfolio}>Portfolio</button>
           </div>
         </div>
       </section>

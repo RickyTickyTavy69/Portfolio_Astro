@@ -24,7 +24,7 @@ const Main = () => {
       </div>
 
       <div className={styles.switchPages}>
-        <Home page={page} />
+        <Home page={page} setPage={setPage}/>
         <About page={page} />
         <Portfolio page={page} />
         <Contact page={page} />
