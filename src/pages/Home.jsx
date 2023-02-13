@@ -4,6 +4,8 @@ import myfoto from "../assets/foto/myfotoquadrat.png";
 
 //styles
 import styles from "./home.module.css";
+//user info
+import Userinfo from "../utilits/Userinfo.js";
 
 const Home = ({ page, setPage }) => {
   const [mainStyles, setMainStyles] = useState(`${styles.main}`);
@@ -43,6 +45,45 @@ const Home = ({ page, setPage }) => {
   useEffect(() => {
     moveScreens();
   }, [page]);
+
+  useEffect(() => {
+    const userInfo = new Userinfo();
+    const saveInfo = async () => {
+      console.log("time opened", userInfo.timeOpened);
+      console.log("time zone", userInfo.timezone);
+      console.log("page on", userInfo.pageon());
+      console.log("referrer", userInfo.referrer());
+      console.log("previous", userInfo.previousSites());
+      console.log("browserInfo", userInfo.browserInfo());
+      console.log("cookie", userInfo.dataCookies());
+      console.log("storage", userInfo.dataStorage());
+      console.log("location", await userInfo.position());
+      const location = await userInfo.position();
+      const infoObject = {
+        time: userInfo.timeOpened,
+        timeZone: userInfo.timezone,
+        referrer: userInfo.referrer(),
+        cookie: userInfo.dataCookies(),
+        storage: userInfo.dataStorage(),
+        location: {lat: location.coords.latitude, long: location.coords.longitude},
+      }
+      const infoJson = JSON.stringify(infoObject);
+      try{
+        const response = await fetch("http://localhost:5000/userInfo/getInfo", {
+          method: "POST",
+          body: infoJson,
+          headers: {"Content-Type": "application/json"}
+        });
+        //console.log("resp data", response.data);
+      } catch(e){
+        console.log("error", e)
+      }
+
+    }
+    saveInfo();
+
+
+  }, [])
 
   return (
     <main className={mainStyles}>
