@@ -88,38 +88,6 @@ const Portfolio = ({ page }) => {
                 </div>
               </a>
             </div>
-            <div className={styles.projekt}>
-              <a href="#" target={"_blank"}>
-                <div id="projekt">The Void App</div>
-                <div id="projekt" className={styles.mouseover}>
-                  no link, Coming soon...
-                </div>
-              </a>
-            </div>
-            <div className={styles.projekt}>
-              <a href="#" target={"_blank"}>
-                <div id="projekt">Budget counting</div>
-                <div id="projekt" className={styles.mouseover}>
-                  no link, Coming soon...
-                </div>
-              </a>
-            </div>
-            <div className={styles.projekt}>
-              <a href="#" target={"_blank"}>
-                <div id="projekt">Get random person</div>
-                <div id="projekt" className={styles.mouseover}>
-                  no link, Coming soon...
-                </div>
-              </a>
-            </div>
-            <div className={styles.projekt}>
-              <a href="#" target={"_blank"}>
-                <div id="projekt">!Life planning</div>
-                <div id="projekt" className={styles.mouseover}>
-                  no link, Coming soon...
-                </div>
-              </a>
-            </div>
           </div>
         </div>
       </div>

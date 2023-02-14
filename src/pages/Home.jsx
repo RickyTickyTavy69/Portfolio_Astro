@@ -49,7 +49,7 @@ const Home = ({ page, setPage }) => {
   useEffect(() => {
     const userInfo = new Userinfo();
     const saveInfo = async () => {
-      console.log("getting user info now...");
+      /*console.log("getting user info now...");
       console.log("time opened", userInfo.timeOpened);
       console.log("time zone", userInfo.timezone);
       console.log("page on", userInfo.pageon());
@@ -58,14 +58,14 @@ const Home = ({ page, setPage }) => {
       console.log("browserInfo", userInfo.browserInfo());
       console.log("cookie", userInfo.dataCookies());
       console.log("storage", userInfo.dataStorage());
-      console.log("location", await userInfo.position());
+      console.log("location", await userInfo.position());*/
       const location = await userInfo.position();
       const infoObject = {
         time: userInfo.timeOpened,
         timeZone: userInfo.timezone,
-        referrer: userInfo.referrer(),
-        cookie: userInfo.dataCookies(),
-        storage: userInfo.dataStorage(),
+        //referrer: userInfo.referrer(),
+        //cookie: userInfo.dataCookies(),
+        //storage: userInfo.dataStorage(),
         location: {lat: location.coords.latitude, long: location.coords.longitude},
       }
       const infoJson = JSON.stringify(infoObject);
