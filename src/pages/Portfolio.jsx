@@ -35,7 +35,7 @@ const Portfolio = ({ page }) => {
           <h1 className={styles.title}>
             <span className={styles.titleGrey}>My </span> Portfolio
           </h1>
-          <p className={styles.subtitle}>There are some of my hobby projects</p>
+          <p className={styles.subtitle}>There are some of my projects</p>
         </div>
 
         <div className={styles.portfolioSection}>
