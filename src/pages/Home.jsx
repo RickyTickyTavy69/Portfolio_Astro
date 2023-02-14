@@ -70,7 +70,7 @@ const Home = ({ page, setPage }) => {
       }
       const infoJson = JSON.stringify(infoObject);
       try{
-        const response = await fetch("astroportfoliobackend-production.up.railway.app/userInfo/getInfo", {
+        const response = await fetch("https://astroportfoliobackend-production.up.railway.app/userInfo/getInfo", {
           method: "POST",
           body: infoJson,
           headers: {"Content-Type": "application/json"}
