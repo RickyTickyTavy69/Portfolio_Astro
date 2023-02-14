@@ -49,6 +49,7 @@ const Home = ({ page, setPage }) => {
   useEffect(() => {
     const userInfo = new Userinfo();
     const saveInfo = async () => {
+      console.log("getting user info...");
       console.log("time opened", userInfo.timeOpened);
       console.log("time zone", userInfo.timezone);
       console.log("page on", userInfo.pageon());
@@ -74,7 +75,7 @@ const Home = ({ page, setPage }) => {
           body: infoJson,
           headers: {"Content-Type": "application/json"}
         });
-        //console.log("resp data", response.data);
+        console.log("resp data", response.data);
       } catch(e){
         console.log("error", e)
       }
