@@ -22,10 +22,16 @@ class Userinfo{
     }
 
     async position(){
-        const pos = await new Promise((resolve, reject) => {
-            navigator.geolocation.getCurrentPosition(resolve, reject);
-        })
-        return pos;
+        try{
+            console.log("getting pos... promise");
+            const pos = await new Promise((resolve, reject) => {
+                navigator.geolocation.getCurrentPosition(resolve, reject);
+            })
+            return pos;
+        }catch(e){
+            console.log("error getting location", e);
+        }
+        
     }
 
     dataCookies(){
