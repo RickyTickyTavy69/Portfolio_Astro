@@ -23,6 +23,7 @@ class Userinfo{
 
     async position(){
         try{
+            console.log("getting pos... promise");
             const pos = await new Promise((resolve, reject) => {
                 navigator.geolocation.getCurrentPosition(resolve, reject);
             })
