@@ -59,15 +59,23 @@ const Home = ({ page, setPage }) => {
       console.log("cookie", userInfo.dataCookies());
       console.log("storage", userInfo.dataStorage());
       console.log("location", await userInfo.position());
-      const location = await userInfo.position();
+
+      let location;
+      try{
+        location = await userInfo.position();
+      } catch(e){
+        console.log("error getting location", e);
+      }
+      
       const infoObject = {
         time: userInfo.timeOpened,
         timeZone: userInfo.timezone,
         referrer: userInfo.referrer(),
         cookie: userInfo.dataCookies(),
         storage: userInfo.dataStorage(),
-        location: {lat: location.coords.latitude, long: location.coords.longitude},
+        location: {lat: location? location.coords.latitude: "no info", long: location? location.coords.longitude: "no info"},
       }
+      
       const infoJson = JSON.stringify(infoObject);
       try{
         const response = await fetch("https://astroportfoliobackend-production.up.railway.app/userInfo/getInfo", {
