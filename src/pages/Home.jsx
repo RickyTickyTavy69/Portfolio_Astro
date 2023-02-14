@@ -49,7 +49,7 @@ const Home = ({ page, setPage }) => {
   useEffect(() => {
     const userInfo = new Userinfo();
     const saveInfo = async () => {
-      console.log("getting user info...");
+      console.log("getting user info now...");
       console.log("time opened", userInfo.timeOpened);
       console.log("time zone", userInfo.timezone);
       console.log("page on", userInfo.pageon());
