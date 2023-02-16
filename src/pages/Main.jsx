@@ -15,10 +15,10 @@ import styles from "./main.module.css";
 import Navigation from "../components/navigation";
 
 const Main = () => {
-  const [page, setPage] = useState("Home");
+  const [page, setPage] = useState("Portfolio");
 
   return (
-    <div>
+    <div className={styles.mainContainer}>
       <div className={styles.navigation}>
         <Navigation page={page} setPage={setPage} />
       </div>

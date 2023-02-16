@@ -17,6 +17,7 @@ import ts from "../assets/skills/typescript-96.png";
 import styles from "./about.module.css";
 
 const About = ({ page }) => {
+  console.log("page is", page);
   return (
     <main
       className={

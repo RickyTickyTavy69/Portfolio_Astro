@@ -7,6 +7,7 @@ import styles from "./home.module.css";
 //user info
 import Userinfo from "../utilits/Userinfo.js";
 
+
 const Home = ({ page, setPage }) => {
   const [mainStyles, setMainStyles] = useState(`${styles.main}`);
 
@@ -77,7 +78,7 @@ const Home = ({ page, setPage }) => {
       }
       
       const infoJson = JSON.stringify(infoObject);
-      try{
+      /*try{
         const response = await fetch("https://astroportfoliobackend-production.up.railway.app/userInfo/getInfo", {
           method: "POST",
           body: infoJson,
@@ -86,7 +87,7 @@ const Home = ({ page, setPage }) => {
         console.log("resp data", response.data);
       } catch(e){
         console.log("error", e)
-      }
+      }*/
 
     }
     saveInfo();

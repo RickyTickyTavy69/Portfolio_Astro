@@ -1,6 +1,6 @@
 .switchPages {
   display: flex;
-  width: 400%;
+  width: 400vw;
   overflow: hidden;
 }
 

@@ -10,10 +10,10 @@
 }
 
 .main.active {
+  height: 100vh;
   position: relative;
   transition: left 0.3s;
   left: 0;
-  height: 100vh;
   display: block;
 }
 
@@ -67,20 +67,7 @@
   position: absolute;
 }
 
-.infoSection {
-  display: flex;
-  justify-content: space-around;
-  padding: 8vh 50px 10vh 50px;
-  gap: 50px;
-}
 
-.infoSection img {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  left: -20px;
-  top: -20px;
-}
 
 .pictureContainer {
   border: 5px solid rgba(255, 20, 147, 0.6);
@@ -150,14 +137,31 @@
   transition: 0.3s;
 }
 
-.skillsSection {
+.infoSection {
   display: flex;
   justify-content: space-around;
+  padding: 8vh 50px 10vh 50px;
+  gap: 50px;
+}
+
+.infoSection img {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: -20px;
+  top: -20px;
+}
+
+.skillsSection {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .skill img {
-  width: 60px;
-  height: 60px;
+  max-width: 60px;
+  max-height: 60px;
 }
 
 /*media queries*/
@@ -169,6 +173,14 @@
 
   .info {
     width: 90%;
+  }
+
+  .skillsSection {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
   }
 }
 

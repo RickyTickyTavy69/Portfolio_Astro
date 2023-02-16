@@ -58,8 +58,13 @@
 }
 
 /*=================================*/
+.portfolioSection{
+  display: flex;
+  justify-content: space-around;
+}
 
 .portfolioContainer {
+  width: 80vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
@@ -68,6 +73,8 @@
   width: 300px;
   height: 200px;
   margin: 5vh 0 5vh 0;
+  display: flex;
+  justify-content: center;
 }
 
 .projekt div {
