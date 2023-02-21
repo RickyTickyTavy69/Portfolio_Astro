@@ -15,7 +15,7 @@ import styles from "./main.module.css";
 import Navigation from "../components/navigation";
 
 const Main = () => {
-  const [page, setPage] = useState("Portfolio");
+  const [page, setPage] = useState("Home");
 
   return (
     <div className={styles.mainContainer}>
