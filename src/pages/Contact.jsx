@@ -73,7 +73,7 @@ const Contact = ({ page }) => {
       <div className={styles.mainContent}>
         <div>
           <h1 className={styles.title}>
-            <span className={styles.titleGrey}>My </span> Contacts
+            <span className={styles.titleGrey}>Contact </span> Me
           </h1>
           <p className={styles.subtitle}>
             If you want to employ me or have some project or idea or anything

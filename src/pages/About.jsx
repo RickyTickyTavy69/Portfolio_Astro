@@ -30,8 +30,7 @@ const About = ({ page }) => {
             <span className={styles.titleGrey}>About </span> me
           </h1>
           <p className={styles.subtitle}>
-            I am a junior full stack web developer and I am motivated to become
-            better
+            I am a junior full stack web developer and I get better every day
           </p>
         </div>
 
@@ -77,7 +76,7 @@ const About = ({ page }) => {
                 </div>
                 <div className={styles.line}>
                   <p>
-                    Languages <span>German, English, Russian, Spanish</span>
+                    Languages <span>German, English, Spanish</span>
                   </p>
                 </div>
                 <div className={styles.line}>

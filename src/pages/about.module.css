@@ -208,3 +208,22 @@
     padding: 5vh 50px 5vh 50px;
   }
 }
+
+
+@media (max-width: 1200px) {
+  .infoSection .line {
+    font-size: 0.9em;
+  }
+
+  .info {
+    width: 90%;
+  }
+
+  .skillsSection {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
