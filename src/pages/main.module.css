@@ -1,7 +1,7 @@
 .switchPages {
   display: flex;
   width: 400vw;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .smallLayout {
@@ -20,6 +20,6 @@
   .smallLayout {
     display: flex;
     width: 400%;
-    overflow: hidden;
+    overflow-x: hidden;
   }
 }

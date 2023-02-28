@@ -40,7 +40,7 @@ const About = ({ page }) => {
           </div>
           <div className={styles.infoContainer}>
             <div className={styles.info}>
-              <duv className={styles.column}>
+              <div className={styles.column}>
                 <div className={styles.line}>
                   <p>
                     First Name <span>Artem</span>
@@ -66,9 +66,9 @@ const About = ({ page }) => {
                     Adress <span>Düsseldorf</span>
                   </p>
                 </div>
-              </duv>
+              </div>
 
-              <duv className={styles.column}>
+              <div className={styles.column}>
                 <div className={styles.line}>
                   <p>
                     Avaliable for work <span>true</span>
@@ -111,58 +111,59 @@ const About = ({ page }) => {
                     </a>
                   </p>
                 </div>
-              </duv>
+              </div>
             </div>
-
-            <a className={styles.button} href={cv} download>
-              Download my CV
-            </a>
+            <div className={styles.buttonContainer}>
+               <a className={styles.button} href={cv} download>
+                  Download my CV
+               </a>
+            </div>
           </div>
         </div>
 
         <section className={styles.skillsSection}>
           <div className={styles.skill}>
-            <img src={html} alt="react.js" />
+            <img src={html} alt="html5" />
             <h3>HTML5</h3>
           </div>
           <div className={styles.skill}>
-            <img src={css} alt="react.js" />
+            <img src={css} alt="css3" />
             <h3>CSS3</h3>
           </div>
           <div className={styles.skill}>
-            <img src={Sass} alt="react.js" />
+            <img src={Sass} alt="sass" />
             <h3>SASS</h3>
           </div>
           <div className={styles.skill}>
-            <img src={js} alt="react.js" />
+            <img src={js} alt="js" />
             <h3>JavaScript</h3>
           </div>
           <div className={styles.skill}>
-            <img src={nodejs} alt="react.js" />
+            <img src={nodejs} alt="Node.JS" />
             <h3>Node.JS</h3>
           </div>
           <div className={styles.skill}>
-            <img src={react} alt="react.js" />
+            <img src={react} alt="React.JS" />
             <h3>React.JS</h3>
           </div>
           <div className={styles.skill}>
-            <img src={express} alt="react.js" />
+            <img src={express} alt="Express.JS" />
             <h3>Express.JS</h3>
           </div>
           <div className={styles.skill}>
-            <img src={monogoDB} alt="react.js" />
+            <img src={monogoDB} alt="MongoDB" />
             <h3>MongoDB</h3>
           </div>
           <div className={styles.skill}>
-            <img src={git} alt="react.js" />
+            <img src={git} alt="GIT" />
             <h3>GIT</h3>
           </div>
           <div className={styles.skill}>
-            <img src={gitHub} alt="react.js" />
+            <img src={gitHub} alt="GitHub" />
             <h3>GitHub</h3>
           </div>
           <div className={styles.skill}>
-            <img src={ts} alt="react.js" />
+            <img src={ts} alt="TypeScript" />
             <h3>TypeScript</h3>
           </div>
         </section>

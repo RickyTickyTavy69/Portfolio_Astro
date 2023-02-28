@@ -18,7 +18,7 @@
 }
 
 .mainContent {
-  padding-top: 0px;
+  padding-top: 0;
   max-width: 1300px;
   margin: 0 auto;
   display: flex;
@@ -67,18 +67,30 @@
   position: absolute;
 }
 
-
-
 .pictureContainer {
   border: 5px solid rgba(255, 20, 147, 0.6);
   position: relative;
-  width: 400px;
-  height: 400px;
+  min-width: 400px;
+  min-height: 400px;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.pictureContainer img{
+  border: 1px solid black;
+}
+
+.infoSection img {
+  position: absolute;
+  min-width: 400px;
+  min-height: 400px;
+  left: -20px;
+  top: -20px;
 }
 
 .infoContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: column;
   width: 55%;
 }
@@ -86,7 +98,9 @@
 .info {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10vh;
   width: 100%;
+
 }
 
 .line {
@@ -200,6 +214,14 @@
     height: 300px;
   }
 
+  .infoSection img {
+    position: absolute;
+    min-width: 400px;
+    min-height: 400px;
+    left: -20px;
+    top: -20px;
+  }
+
   .line {
     margin-bottom: 25px;
   }
@@ -216,14 +238,48 @@
   }
 
   .info {
-    width: 90%;
+    width: 100%;
+
   }
 
-  .skillsSection {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    flex-wrap: wrap;
+  .infoContainer{
+    width: 60vw;
+
   }
+
+  .infoSection img {
+    position: absolute;
+    min-width: 300px;
+    min-height: 300px;
+    left: -20px;
+    top: -20px;
+  }
+
+  .pictureContainer {
+    border: 5px solid rgba(255, 20, 147, 0.6);
+    position: relative;
+    min-width: 300px;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 950px) {
+  .pictureContainer{
+    display: none;
+  }
+
+  .infoContainer{
+    width: 80vw;
+
+  }
+
+  .info{
+    margin-bottom: 5vh;
+  }
+
+  .skillsSection{
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+  }
+
 }
