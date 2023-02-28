@@ -1,5 +1,4 @@
 .main {
-  height: 100vh;
   width: 100vw;
   position: relative;
   z-index: 1;
@@ -10,7 +9,6 @@
 }
 
 .main.active {
-  height: 100vh;
   position: relative;
   transition: left 0.3s;
   left: 0;

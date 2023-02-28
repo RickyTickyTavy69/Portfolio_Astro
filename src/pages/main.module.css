@@ -1,7 +1,17 @@
-.switchPages {
+.mainContainer{
+  height: 100%;
+}
+
+.switchPages{
   display: flex;
   width: 400vw;
-  overflow-x: hidden;
+  height: 100vh;
+  /*overflow-x: hidden;*/
+}
+
+.switchPages main{
+  border: 1px solid deeppink;
+  height: 100vh;
 }
 
 .smallLayout {
@@ -21,5 +31,6 @@
     display: flex;
     width: 400%;
     overflow-x: hidden;
+    height: 100vh;
   }
 }
