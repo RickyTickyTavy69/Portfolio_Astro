@@ -62,25 +62,25 @@ const Navigation = ({ page, setPage }) => {
           <i id="navHome" className="material-icons">
             home
           </i>
-          <span id="navHome">Home</span>
+          <span data-style="Home" id="navHome">Home</span>
         </li>
         <li id="navAbout">
           <i id="navAbout" className="material-icons">
             person
           </i>
-          <span id="navAbout">About</span>
+          <span data-style="About" id="navAbout">About</span>
         </li>
         <li id="navPortfolio">
           <i id="navPortfolio" className="material-icons">
             library_books
           </i>
-          <span id="navPortfolio">Portfolio</span>
+          <span data-style="Portfolio" id="navPortfolio">Portfolio</span>
         </li>
         <li id="navContact">
           <i id="navContact" className="material-icons">
             alternate_email
           </i>
-          <span id="navContact">Contact</span>
+          <span data-style="Contact" id="navContact">Contact</span>
         </li>
       </ul>
     </div>

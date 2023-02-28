@@ -166,7 +166,7 @@
 
 /*media queries*/
 
-@media (max-width: 1200px) {
+@media (max-width: 1430px) {
   .infoSection .line {
     font-size: 0.9em;
   }
