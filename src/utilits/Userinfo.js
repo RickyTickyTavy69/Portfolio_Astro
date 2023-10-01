@@ -26,7 +26,7 @@ class Userinfo{
                     {
                         method: "POST",
                         body: userDataJson,
-                        headers: {"Content-type:" : "application/json"}
+                        headers: {"Content-Type": "application/json"}
                     })
                 console.log("res is", resp);
             });
