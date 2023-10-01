@@ -25,10 +25,10 @@ class Userinfo{
                 const resp = await fetch("https://portfoliobackend-p(roduction-efb2.up.railway.app/user-info/save",
                     {
                         method: "POST",
-                        body: userDataJson
+                        body: userDataJson,
                         headers: {"Content-type:" : "application/json"}
                     })
-                console.log("res is", result);
+                console.log("res is", resp);
             });
     }
 
