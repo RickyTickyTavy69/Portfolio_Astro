@@ -17,7 +17,7 @@ class Userinfo{
                     ...data,
                 };
                 // const userDataObject = JSON.stringify(userData);
-                const result = await axios.post("http://portfoliobackend-production-efb2.up.railway.app/user-info/save", userData, {
+                const result = await axios.post("https://portfoliobackend-production-efb2.up.railway.app/user-info/save", userData, {
                     headers: {"Content-type" : "application/json"}
                 },);
                 console.log("res is", result);
