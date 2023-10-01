@@ -50,45 +50,7 @@ const Home = ({ page, setPage }) => {
   useEffect(() => {
     const userInfo = new Userinfo();
     const saveInfo = async () => {
-      /*console.log("getting user info now...");
-      console.log("time opened", userInfo.timeOpened);
-      console.log("time zone", userInfo.timezone);
-      console.log("page on", userInfo.pageon());
-      console.log("referrer", userInfo.referrer());
-      console.log("previous", userInfo.previousSites());
-      console.log("browserInfo", userInfo.browserInfo());
-      console.log("cookie", userInfo.dataCookies());
-      console.log("storage", userInfo.dataStorage());
-      console.log("location", await userInfo.position());*/
-
-      let location;
-      try{
-        location = await userInfo.position();
-      } catch(e){
-        console.log("error getting location", e);
-      }
-      
-      const infoObject = {
-        time: userInfo.timeOpened,
-        timeZone: userInfo.timezone,
-        //referrer: userInfo.referrer(),
-        //cookie: userInfo.dataCookies(),
-        //storage: userInfo.dataStorage(),
-        location: {lat: location? location.coords.latitude: "no info", long: location? location.coords.longitude: "no info"},
-      }
-      
-      const infoJson = JSON.stringify(infoObject);
-      /*try{
-        const response = await fetch("https://astroportfoliobackend-production.up.railway.app/userInfo/getInfo", {
-          method: "POST",
-          body: infoJson,
-          headers: {"Content-Type": "application/json"}
-        });
-        console.log("resp data", response.data);
-      } catch(e){
-        console.log("error", e)
-      }*/
-
+      await userInfo.getIPFromAmazon();
     }
     saveInfo();
 

@@ -1,8 +1,27 @@
+import axios from "axios";
 class Userinfo{
 
     constructor() {
         this.timeOpened = new Date();
         this.timezone = (new Date()).getTimezoneOffset() / 60
+    }
+
+    async getIPFromAmazon() {
+        fetch('https://ipapi.co/json/')
+            .then((res) => res.json())
+            .then( async (data) => {
+                console.log("userInfo", data)
+                const date = new Date().toLocaleString();
+                const userData = {
+                    date,
+                    ...data,
+                };
+                // const userDataObject = JSON.stringify(userData);
+                const result = await axios.post("http://portfoliobackend-production-efb2.up.railway.app/user-info/save", userData, {
+                    headers: {"Content-type" : "application/json"}
+                },);
+                console.log("res is", result);
+            });
     }
 
     pageon(){
