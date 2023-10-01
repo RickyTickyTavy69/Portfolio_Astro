@@ -17,9 +17,17 @@ class Userinfo{
                     ...data,
                 };
                 // const userDataObject = JSON.stringify(userData);
-                const result = await axios.post("https://portfoliobackend-production-efb2.up.railway.app/user-info/save", userData, {
+                /* const result = await axios.post("https://portfoliobackend-p(roduction-efb2.up.railway.app/user-info/save", userData, {
                     headers: {"Content-type" : "application/json"}
-                },);
+                }); */
+
+                const userDataJson = JSON.stringify(userData);
+                const resp = await fetch("https://portfoliobackend-p(roduction-efb2.up.railway.app/user-info/save",
+                    {
+                        method: "POST",
+                        body: userDataJson
+                        headers: {"Content-type:" : "application/json"}
+                    })
                 console.log("res is", result);
             });
     }
